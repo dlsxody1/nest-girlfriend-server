@@ -5,4 +5,8 @@ export class AppService {
   getHello(): void {
     return console.log(process.env.DB_PORT);
   }
+
+  saveUserData(): void {
+    return;
+  }
 }

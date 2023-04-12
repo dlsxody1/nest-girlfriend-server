@@ -18,5 +18,8 @@ export class Comment extends BaseEntity {
   nickname: string;
 
   @CreateDateColumn({ type: 'timestamp' })
+  expires: Date;
+
+  @CreateDateColumn({ type: 'timestamp' })
   createdAt: Date;
 }
