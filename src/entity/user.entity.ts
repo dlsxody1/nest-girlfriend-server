@@ -7,19 +7,13 @@ import {
 } from 'typeorm';
 
 @Entity()
-export class Comment extends BaseEntity {
+export class User extends BaseEntity {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: string;
 
   @Column()
-  email: string;
+  name: string;
 
   @Column()
-  nickname: string;
-
-  @CreateDateColumn({ type: 'timestamp' })
-  expires: Date;
-
-  @CreateDateColumn({ type: 'timestamp' })
-  createdAt: Date;
+  image: string;
 }

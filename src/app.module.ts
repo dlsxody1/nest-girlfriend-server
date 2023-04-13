@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeORMConfig } from './configs/typeorm.config';
 import { ConfigModule } from '@nestjs/config';
 import { ConfigService } from '@nestjs/config';
+import { AuthModule } from './auth/auth.module';
 
 console.log(process.env.DB_PORT);
 @Module({
@@ -14,6 +15,7 @@ console.log(process.env.DB_PORT);
       isGlobal: true,
       envFilePath: '.env',
     }),
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
